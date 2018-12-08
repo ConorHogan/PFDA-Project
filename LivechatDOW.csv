@@ -1,4 +1,4 @@
-﻿Day,Hour,Livechat,PublishedRequest,InvitedSuppliers,DeadlineRequests,DeadlineSuppliers,CombinedRequests,CombinedSupplierActions,NewUserMails,NonRegMails
+﻿Day,Hour,Livechat,PublishedCount,SuppliersInvitedCount,DeadlineCount,SupplierDeadlineCount,CombinedRequests,CombinedSupplierAction,NonRegMail,NewUserMail
 1,0,0,0,0,0,0,0,0,4,76
 1,1,0,0,0,10,14,10,14,1,48
 1,2,0,0,0,0,0,0,0,2,7
