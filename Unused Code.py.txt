@@ -1,0 +1,31 @@
+# set width of bar
+barWidth = 0.25
+ 
+# Set position of bar on X axis
+x_pos0 = np.arange(len(day_series))
+x_pos1 = [x + barWidth for x in x_pos0]
+x_pos2 = [x + barWidth for x in x_pos1]
+x_pos3 = [x + barWidth for x in x_pos2]
+x_pos4 = [x + barWidth for x in x_pos3]
+
+livechat_by_DOM = DOM_groupby["Livechat"].values
+combinv_by_DOM = DOM_groupby["CombinedSupplierAction"].values
+combreq_by_DOM = DOM_groupby["CombinedRequests"].values
+newuser_by_DOM = DOM_groupby["NewUserMail"].values
+nonreqmail_by_DOM = DOM_groupby["NonRegMail"].values
+
+# Make the plot
+plt.bar(x_pos0, livechat_by_DOM, color='b', width=barWidth, edgecolor='white', label='Livechat')
+plt.bar(x_pos1, combreq_by_DOM, color='g', width=barWidth, edgecolor='white', label='Combined Requests')
+plt.bar(x_pos2, combinv_by_DOM, color='r', width=barWidth, edgecolor='white', label='Combined Suppliers')
+plt.bar(x_pos3, newuser_by_DOM, color='c', width=barWidth, edgecolor='white', label='New User Mails')
+
+ 
+# Add xticks on the middle of the group bars
+plt.xlabel('Day Comparison', fontweight='bold')
+plt.xticks([r + barWidth for r in range(len(day_series))])
+ 
+# Create legend & Show graphic
+plt.legend()
+plt.rcParams["figure.figsize"]=75,25
+plt.show()
